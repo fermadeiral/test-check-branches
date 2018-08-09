@@ -43,15 +43,22 @@ public class PatchStats {
         String[] lines = gitOutput.toString().split("\n");
         for (String line : lines) {
             String[] aux = line.split("\t");
-            if (aux.length == 2) {
+            if (aux.length >= 2) {
                 String status = aux[0];
-                String fileName = aux[1];
-                if (status.equals("M")) {
-                    this.changedFiles.add(fileName);
-                } else if (status.equals("A")) {
-                    this.addedFiles.add(fileName);
-                } else if (status.equals("D")) {
-                    this.deletedFiles.add(fileName);
+                if (aux.length == 2) {
+                    String fileName = aux[1];
+                    if (status.equals("M")) {
+                        this.changedFiles.add(fileName);
+                    } else if (status.equals("A")) {
+                        this.addedFiles.add(fileName);
+                    } else if (status.equals("D")) {
+                        this.deletedFiles.add(fileName);
+                    }
+                } else if (aux.length == 3) {
+                    String fileName = aux[2];
+                    if (status.startsWith("R")) {
+                        this.changedFiles.add(fileName);
+                    }
                 }
             }
         }
