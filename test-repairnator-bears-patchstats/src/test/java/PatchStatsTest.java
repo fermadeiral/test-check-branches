@@ -11,14 +11,10 @@ import static org.junit.Assert.assertEquals;
 public class PatchStatsTest {
 
     private File tmpDir;
-    private String repoUrl;
-    private StringBuilder gitDirPath;
 
     @Before
     public void setUp() throws IOException {
         tmpDir = Files.createTempDirectory("workspace").toFile();
-        repoUrl = "https://github.com/fermadeiral/bears-usage.git";
-        gitDirPath = GitHelper.gitClone(repoUrl, tmpDir, false);
     }
 
     @After
@@ -38,6 +34,9 @@ public class PatchStatsTest {
 
     @Test
     public void testComputeFiles() {
+        String repoUrl = "https://github.com/fermadeiral/bears-usage.git";
+        StringBuilder gitDirPath = GitHelper.gitClone(repoUrl, tmpDir, false);
+
         String commit1 = "6565b62263c1a8209933587aa68dff5307abf32e";
         String commit2 = "e90c26bbfbdbdc9039090f4cd5108fc17273bf5d";
 
@@ -50,7 +49,26 @@ public class PatchStatsTest {
     }
 
     @Test
+    public void testComputeFilesWithCommitThatRenameFile() {
+        String repoUrl = "https://github.com/Spirals-Team/repairnator.git";
+        StringBuilder gitDirPath = GitHelper.gitClone(repoUrl, tmpDir, true);
+
+        String commit1 = "811ce1d03c9f9e63a421231ea7d8e4a9a7f82ece";
+        String commit2 = "82c199366f552e3e102e4e702ddc70ac767334dd";
+
+        PatchStats patchStats =  new PatchStats();
+        patchStats.computeFiles(commit1, commit2, new File(gitDirPath.toString()));
+
+        assertEquals(10, patchStats.getChangedFiles().size());
+        assertEquals(0, patchStats.getAddedFiles().size());
+        assertEquals(0, patchStats.getDeletedFiles().size());
+    }
+
+    @Test
     public void testComputeLines() {
+        String repoUrl = "https://github.com/fermadeiral/bears-usage.git";
+        StringBuilder gitDirPath = GitHelper.gitClone(repoUrl, tmpDir, false);
+
         String commit1 = "6565b62263c1a8209933587aa68dff5307abf32e";
         String commit2 = "e90c26bbfbdbdc9039090f4cd5108fc17273bf5d";
 
