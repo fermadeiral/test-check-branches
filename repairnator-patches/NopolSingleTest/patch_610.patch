@@ -1,0 +1,9 @@
+--- a/src/main/java/nopol_examples/nopol_example_1/NopolExample.java
++++ b/src/main/java/nopol_examples/nopol_example_1/NopolExample.java
+@@ -11,4 +11,4 @@
+ 		
+-		if ( index == 0 ) // Fix index <= 0
+-			return s.charAt(0);
++		if ( (index <= 0) != (this.index < index)) // Fix index <= 0
++		return s.charAt(0);
+ 		
