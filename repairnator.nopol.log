@@ -17848,3 +17848,53 @@ NopolExample.java:24: error: variable variableInsideConstructor might not have b
 09:04:09.463 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.gitignore
 09:04:09.463 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.git
 09:04:09.463 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.m2
+09:04:18.764 f.i.s.r.process.files.FileHelper - Notification block detected. The travis file will be changed.
+09:05:07.215 f.i.s.r.p.step.push.CommitPatch - STEP STATUS: [ CommitPatch : SUCCESS ]
+09:05:07.238 f.i.s.r.p.step.push.CommitPatch - STEP DURATION: 58s
+09:05:07.238 f.i.s.r.p.step.push.CommitPatch - EXECUTE NEXT STEP
+09:05:07.238 f.i.s.r.p.s.c.CheckoutPatchedBuild - ----------------------------------------------------------------------
+09:05:07.238 f.i.s.r.p.s.c.CheckoutPatchedBuild - STEP 12/21: CheckoutPatchedBuild
+09:05:07.238 f.i.s.r.p.s.c.CheckoutPatchedBuild - ----------------------------------------------------------------------
+09:05:07.238 f.i.s.r.p.s.c.CheckoutPatchedBuild - Checking out patched build candidate...
+09:05:07.238 f.i.s.r.p.s.c.CheckoutPatchedBuild - There is no patched build retrieved. This will stop now.
+09:05:07.598 f.i.s.r.p.s.c.CheckoutPatchedBuild - STEP STATUS: [ CheckoutPatchedBuild : FAILURE ( BUILDNOTCHECKEDOUT ) ]
+09:05:07.598 f.i.s.r.p.s.c.CheckoutPatchedBuild - STEP DURATION: 0s
+09:05:07.598 f.i.s.r.p.s.c.CheckoutPatchedBuild - TERMINATE PIPELINE
+09:05:07.598 f.i.s.r.p.s.paths.ComputeSourceDir - ----------------------------------------------------------------------
+09:05:07.598 f.i.s.r.p.s.paths.ComputeSourceDir - STEP 17/21: ComputeSourceDir
+09:05:07.598 f.i.s.r.p.s.paths.ComputeSourceDir - ----------------------------------------------------------------------
+09:05:07.598 f.i.s.r.p.s.paths.ComputeSourceDir - Computing the source directory ...
+09:05:08.012 f.i.s.r.p.s.paths.ComputeSourceDir - 1 source dir was found:
+09:05:08.013 f.i.s.r.p.s.paths.ComputeSourceDir - /home/fernanda/git/repairnator-spirals/workspace/surli/failingProject/208897371/src/main/java
+09:05:08.525 f.i.s.r.p.s.paths.ComputeSourceDir - Compute the line of code of the project
+09:05:17.960 f.i.s.r.p.s.paths.ComputeSourceDir - Get result from cloc process...
+09:05:18.363 f.i.s.r.p.s.paths.ComputeSourceDir - STEP STATUS: [ ComputeSourceDir : SUCCESS ]
+09:05:18.363 f.i.s.r.p.s.paths.ComputeSourceDir - STEP DURATION: 10s
+09:05:18.363 f.i.s.r.p.s.paths.ComputeSourceDir - EXECUTE NEXT STEP
+09:05:18.363 f.i.s.r.p.step.paths.ComputeModules - ----------------------------------------------------------------------
+09:05:18.363 f.i.s.r.p.step.paths.ComputeModules - STEP 18/21: ComputeModules
+09:05:18.364 f.i.s.r.p.step.paths.ComputeModules - ----------------------------------------------------------------------
+09:05:18.364 f.i.s.r.p.step.paths.ComputeModules - Computing project modules...
+09:05:18.366 f.i.s.r.p.step.paths.ComputeModules - STEP STATUS: [ ComputeModules : SUCCESS ]
+09:05:18.366 f.i.s.r.p.step.paths.ComputeModules - STEP DURATION: 0s
+09:05:18.366 f.i.s.r.p.step.paths.ComputeModules - EXECUTE NEXT STEP
+09:05:18.366 f.i.s.r.p.step.WritePropertyFile - ----------------------------------------------------------------------
+09:05:18.366 f.i.s.r.p.step.WritePropertyFile - STEP 19/21: WritePropertyFile
+09:05:18.366 f.i.s.r.p.step.WritePropertyFile - ----------------------------------------------------------------------
+09:05:18.366 f.i.s.r.p.step.WritePropertyFile - Writing file with properties...
+09:05:18.689 f.i.s.r.p.step.WritePropertyFile - STEP STATUS: [ WritePropertyFile : SUCCESS ]
+09:05:18.689 f.i.s.r.p.step.WritePropertyFile - STEP DURATION: 0s
+09:05:18.689 f.i.s.r.p.step.WritePropertyFile - EXECUTE NEXT STEP
+09:05:18.689 f.i.s.r.p.step.push.CommitProcessEnd - ----------------------------------------------------------------------
+09:05:18.689 f.i.s.r.p.step.push.CommitProcessEnd - STEP 20/21: CommitProcessEnd
+09:05:18.689 f.i.s.r.p.step.push.CommitProcessEnd - ----------------------------------------------------------------------
+09:05:18.689 f.i.s.r.p.step.push.CommitProcessEnd - Commit process end...
+09:05:18.689 f.i.s.r.process.files.FileHelper - Copying files...
+09:05:18.689 f.i.s.r.process.files.FileHelper - Source dir: ./workspace/surli/failingProject/208897371
+09:05:18.689 f.i.s.r.process.files.FileHelper - Target dir: ./workspace/surli/failingProject/208897371_topush
+09:05:18.725 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.gitignore
+09:05:18.725 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.git
+09:05:18.725 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.m2
+09:05:18.726 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.gitignore
+09:05:18.726 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.git
+09:05:18.726 f.i.s.r.process.files.FileHelper - File not copied: ./workspace/surli/failingProject/208897371/.m2
